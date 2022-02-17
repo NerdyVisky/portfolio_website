@@ -2,6 +2,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path');
+const APIroutes = require('./routes/blogsAPI');
 
 //creating express app instance
 const app = express();
@@ -18,8 +20,42 @@ app.use(express.static(__dirname + '/views'));
 //creating the backend express server
 const PORT = process.env.PORT || 8800;
 app.listen(PORT, () => {console.log(`Server has started at PORT ${PORT}`)});
+app.get('/admin', adminRouteAuth, (req, res) => {
+    res.sendFile('admin.html', {root: __dirname + '/views'});
+})
+
+
+
+
 
 app.get('/', (req, res) => {
-    res.send("Hello world!");
-})
+    res.send("Common Users Page");
+});
+// Importing API Routes
+app.use('/api/blogs', APIroutes);
+
+//Admin auth middleware function
+function adminRouteAuth(req, res, next){
+    if(req.query.key === process.env.SECRET_KEY){
+        next();
+    }else{
+        res.status(403);
+        res.sendFile("accessDenied.html", {root: __dirname + '/views'});
+    }
+}
+
+// Connect Database
+mongoose.set('debug', true);
+mongoose
+  .connect("mongodb+srv://NerdyVisky:Vishvesh106%40@blog-data.ttajq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB database");
+  })
+  .catch((err) => {
+    console.log("ERROR", err.message);
+  });
+
 
