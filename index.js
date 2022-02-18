@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/views'));
 //creating the backend express server
 const PORT = process.env.PORT || 8800;
 app.listen(PORT, () => {console.log(`Server has started at PORT ${PORT}`)});
-app.get('/admin', adminRouteAuth, (req, res) => {
+app.get('/admin', (req, res) => {
     res.sendFile('admin.html', {root: __dirname + '/views'});
 })
 
@@ -34,15 +34,7 @@ app.get('/', (req, res) => {
 // Importing API Routes
 app.use('/api/blogs', APIroutes);
 
-//Admin auth middleware function
-function adminRouteAuth(req, res, next){
-    if(req.query.key === process.env.SECRET_KEY){
-        next();
-    }else{
-        res.status(403);
-        res.sendFile("accessDenied.html", {root: __dirname + '/views'});
-    }
-}
+
 
 // Connect Database
 mongoose.set('debug', true);

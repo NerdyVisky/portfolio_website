@@ -34,7 +34,13 @@ router.get('/:slug', (req, res) => {
     .catch(err => res.send(err));
 });
 
-router.delete('/:slug', (req, res) => {
+router.put('/:id', adminRouteAuth, (req, res) => {
+    Blogs.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then(updatedBlog => res.json(updatedBlog))
+    .catch(err => res.send(err))
+})
+
+router.delete('/:slug', adminRouteAuth, (req, res) => {
     Blogs.findOneAndDelete({slug : req.params.slug})
     .then(deletedBlog => res.send(`${deletedBlog.title} has been deleted.`))
     .catch(err => res.send(err));
@@ -44,7 +50,8 @@ router.delete('/:slug', (req, res) => {
 //Admin auth middleware function
 function adminRouteAuth(req, res, next){
     const authToken = req.headers.authorization;
-    const encoded = authToken.substring(6);
+    if(authToken){
+        const encoded = authToken.substring(6);
     const decoded = Buffer.from(encoded, 'base64').toString('ascii');
     const [username, password] = decoded.split(':');
     if((username === process.env.ADMIN_USERNAME) && (password === process.env.ADMIN_PASSWORD)){
@@ -55,5 +62,11 @@ function adminRouteAuth(req, res, next){
         res.status(401);
         res.sendFile("accessDenied.html", {root: rootDir + '/views'});
     }
+    }else{
+        const rootDir = path.join(__dirname, '../');
+        res.status(401);
+        res.sendFile("accessDenied.html", {root: rootDir + '/views'});
+    }
+    
 }
 module.exports = router;
