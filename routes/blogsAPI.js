@@ -34,14 +34,25 @@ router.get('/:slug', (req, res) => {
     .catch(err => res.send(err));
 });
 
+router.delete('/:slug', (req, res) => {
+    Blogs.findOneAndDelete({slug : req.params.slug})
+    .then(deletedBlog => res.send(`${deletedBlog.title} has been deleted.`))
+    .catch(err => res.send(err));
+});
+
 
 //Admin auth middleware function
 function adminRouteAuth(req, res, next){
-    if(req.query.key === process.env.SECRET_KEY){
+    const authToken = req.headers.authorization;
+    const encoded = authToken.substring(6);
+    const decoded = Buffer.from(encoded, 'base64').toString('ascii');
+    const [username, password] = decoded.split(':');
+    if((username === process.env.ADMIN_USERNAME) && (password === process.env.ADMIN_PASSWORD)){
+        console.log("Auth passed");
         next();
     }else{
         const rootDir = path.join(__dirname, '../');
-        res.status(403);
+        res.status(401);
         res.sendFile("accessDenied.html", {root: rootDir + '/views'});
     }
 }
