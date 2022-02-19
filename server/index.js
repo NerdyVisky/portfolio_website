@@ -39,7 +39,7 @@ app.use('/api/blogs', APIroutes);
 // Connect Database
 mongoose.set('debug', true);
 mongoose
-  .connect("mongodb+srv://NerdyVisky:Vishvesh106%40@blog-data.ttajq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
