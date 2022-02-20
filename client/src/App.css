@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;900&display=swap');
+:root{
+  --primary-accent: #222831;
+  --secondary-accent: #FFD369;
+  --title-font: 'Poppins', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face{
+  font-family: "Georgia";
+  src: url("./assets/fonts/Georgia/georgia.woff") format("woff");
+  font-weight: normal;
+  font-size: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar styles */
+
+header{
+  width: 100%;
+  background-color: var(--primary-accent);
+  padding: 3vh 3vw;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: var(--title-font);
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+.nav-profile{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+img{
+  border-radius: 50%;
+  margin-right: 20px;
+}
+h3 .secondary-accent{
+  color: var(--secondary-accent);
+}
+nav a{
+  margin-right: 3.5vw;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.menu-modal{
+  position: absolute;
+  width: 100vw;
+  top: 9vh;
+  background: var(--primary-accent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateY(-65%);
+  transition: transform ease-out 500ms;
+  padding-top: 40px;
+  font-size: 1.2rem;
+}
+.menu-modal.open{
+  transform: translateY(0);
+}
+.menu-nav{
+  margin-bottom: 25px;
+  margin-left: 25px;
+}
+.menu-nav>*{
+  margin-right: 25px;
 }

@@ -1,0 +1,109 @@
+#home {
+  background-color: var(--primary-accent);
+  width: 100%;
+  height: calc(100vh - 60px - 6vh);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.home-left{
+    margin-top: -30px;
+    padding-left: 7vw;
+    /* background: red; */
+}
+.text-content{
+    padding: 20px 0px;
+}
+.text-content>*{
+    margin-bottom: 20px;
+}
+.name-title span:first-child{
+    font-family: var(--title-font);
+    font-size: 2rem;
+}
+.name-title span:last-child{
+    font-family: 'Consolas', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.work-title{
+    font-size: 5rem;
+    font-family: 'Georgia', sans-serif;
+}
+.desc-home{
+    max-width: 500px;
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.home-right {
+  width: 100px;
+  /* background: red; */
+  align-self: flex-end;
+}
+
+.resume-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-accent);
+    padding: 5px 20px 5px 5px;
+    border-radius: 5px;
+}
+.resume-button span{
+    margin-left: -10px;
+    color: var(--primary-accent);
+    font-family: 'Georgia', sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.icons-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 50px;
+}
+.dynamic-texts{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.dynamic-texts h1{
+    position: relative;
+    top: 0;
+    width: max-content;
+    animation: shift-up 9s steps(3) infinite;
+}
+@keyframes shift-up{
+    to{
+        top: -270px;
+    }
+}
+.dynamic-texts h1::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:var(--primary-accent);
+    border-left: 3px solid var(--secondary-accent);
+    animation: typing 3s steps(20) infinite;
+}
+@keyframes typing {
+    40%, 60%{
+      left: calc(100% + 20px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+
+.icons-wrapper img{
+    width: 45px;
+    margin-top: 15px;
+}
