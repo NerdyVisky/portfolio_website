@@ -52,7 +52,7 @@
     border-radius: 5px;
 }
 .resume-button span{
-    margin-left: -10px;
+    margin-left: 10px;
     color: var(--primary-accent);
     font-family: 'Georgia', sans-serif;
     font-weight: bold;
@@ -106,4 +106,10 @@
 .icons-wrapper img{
     width: 45px;
     margin-top: 15px;
+    transform: translateX(0);
+    transition: transform 500ms ease-in forwards;
+}
+
+.icons-wrapper img:hover{
+    transform: translateX(-5px);
 }

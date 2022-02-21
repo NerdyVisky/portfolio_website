@@ -20,6 +20,9 @@
 a{
   text-decoration: none;
 }
+body{
+  overflow-x: hidden !important;
+}
 
 /* Navbar styles */
 
@@ -41,7 +44,7 @@ header{
   align-items: center;
   justify-content: center;
 }
-img{
+.nav-profile img{
   border-radius: 50%;
   margin-right: 20px;
 }
@@ -77,4 +80,31 @@ nav a{
 }
 .menu-nav>*{
   margin-right: 25px;
+}
+
+
+footer{
+  width: 100%;
+  background: white;
+  position: relative;
+  bottom: 0;
+  font-family: var(--title-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.developed-with img{
+  height: 60px;
+}
+.developed-by{
+  padding: 0 50px;
+}
+.developed-with{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px;
+}
+.developed-with span{
+  margin-right: 10px;
 }

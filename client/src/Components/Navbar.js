@@ -60,10 +60,24 @@ const Navbar = ({vw, onPress}) => {
   return (
     <header>
       <div className="nav-profile">
+      <NavLink
+         to="/about"
+         style={({ isActive }) => ({
+           color: isActive ? "#FFD369" : "#ffffff",
+         })}
+       >
         <img width={profileSize} src={profileImgURL} alt="Vishvesh Trivedi" />
+       </NavLink>
         <h3>
-          vishveshtrivedi<span className="secondary-accent">.in</span>
-        </h3>
+      <NavLink
+         to="/"
+         style={({ isActive }) => ({
+           color: isActive ? "#FFD369" : "#ffffff",
+         })}
+       >
+         <span style={{color: 'white'}}>vishveshtrivedi</span><span className="secondary-accent">.in</span>
+       </NavLink>
+       </h3>
       </div>
       {element}
     </header>

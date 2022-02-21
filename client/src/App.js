@@ -15,7 +15,7 @@ import NotFound from "./Pages/NotFound";
 //importing App Components
 import Navbar from "./Components/Navbar";
 import MenuModal from "./Components/MenuModal";
-
+import Footer from "./Components/Footer";
 
 class App extends Component {
   constructor(props){
@@ -51,6 +51,7 @@ class App extends Component {
           <Route path="/" element={<Home />} />
           <Route path="/*"element={<NotFound />} />
         </Routes>
+        <Footer/>
       </Router>
     );
   }

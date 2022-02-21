@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
 const APIroutes = require('./routes/blogsAPI');
+const cors = require('cors');
 
 //creating express app instance
 const app = express();
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/views'));
+app.use(cors({origin : '*'}));
 
 
 //creating the backend express server

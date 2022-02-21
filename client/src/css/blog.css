@@ -1,0 +1,6 @@
+#blog{
+    background-color: var(--primary-accent);
+    width: 100%;
+    position: relative;
+    z-index: -25;
+}
