@@ -1,22 +1,28 @@
 {
-    "title": "The curious case of NFTs",
-    "main_content": "Would you ever spend 69 million dollars on a JPEG image file?",
-    "authors": [
-      {
-        "name": "Vishvesh Trivedi",
-        "imageURL": "https://docs.google.com/document/d/1wlcbK9Q3IWfaKdgWZOPa0iO96uMrJccZwHnAKCQQEPc/edit",
-        "role": "writer"
-      },
-      {
-        "name": "Freya Parekh",
-        "imageURL": "https://docs.google.com/document/d/1wlcbK9Q3IWfaKdgWZOPa0iO96uMrJccZwHnAKCQQEPc/edit",
-        "role": "designer"
-      }
-    ],
-    "tags": [
-      "technology",
-      "trending",
-      "finance"
-    ],
-    "illustrationLink": "https://docs.google.com/document/d/1wlcbK9Q3IWfaKdgWZOPa0iO96uMrJccZwHnAKCQQEPc/edit"
-}
+  "title": "DDOS in the world of IOT",
+  "authors": [
+  {
+  "name": "Vishvesh Trivedi",
+  "imageURL": "https://docs.google.com/uc?id=1TOKMCaHmReEcyUZ1FAK-2rYuckEPOuOC",
+  "role": "writer"
+  },
+  {
+    "name": "Neelav Bhatiya",
+    "imageURL": "https://docs.google.com/uc?id=1TOKMCaHmReEcyUZ1FAK-2rYuckEPOuOC",
+    "role": "writer"
+  },
+  {
+  "name": "Sauparnika Nair",
+  "imageURL": "https://docs.google.com/uc?id=1TOKMCaHmReEcyUZ1FAK-2rYuckEPOuOC",
+  "role": "designer"
+  }
+  ],
+  "tags": [
+  "technology",
+  "cyber-attack",
+  "twitter-facebook"
+  ],
+  "isFeatured": true,
+  "illustrationLink": "https://docs.google.com/uc?id=1zsJUbnKI55KMgvBc-KUj-8oD2NDKCmoy",
+  "main_content": "\u201CCouldn\u2019t refresh feed\u201D\r\n\r\nMost of us kept receiving this frustrating error message while we made futile attempts to update our Instagram feed during the evening hours of October 4th. It got even more frustrating when WhatsApp thwarted us from sending or receiving any messages. The Facebook app went down as well, but let\u2019s be honest here, not many of us were bothered. App reinstalls, changing Wi-Fi networks or restarting the phone - nothing seemed to work to make these apps function.\r\n\r\nAfter about an hour of hair-pulling, news broke that Facebook servers were down due to an unscrutinized router update that crashed the system. Eventually, Facebook released a statement acknowledging the outage and assured to get the servers working within a few hours. Meanwhile, Twitter was enjoying an unprecedented traffic increase to their site from disappointed Facebook users. And not to forget, we were all entertained by those memes of Mark Zuckerberg, stuck in a cobweb of wires, trying to fix Facebook!\r\n\r\nAll this while, Jack Dorsey, the CEO of Twitter, may have experienced severe PTSD while recalling the dreadful day in 2016 when his company, Twitter, was down and at the sheer mercy of a bunch of hackers. \r\n\r\n\r\nIt was a pleasant autumn morning on October 21st, 2016 at the Civic Center neighbourhood in San Francisco, California. Owing to the upcoming weekend, Twitter headquarters were quieter than usual. Perhaps it was the calm before the massive storm that was about to hit the company. Suddenly, a wave of clomping footsteps replaced the calm air leading to the company head office. In a flash, the door of the CEO\u2019s office was slammed open by an employee.\r\n\r\nShe blurted out, \u201CSir, we are down. Twitter is down!\u201D\r\n\r\nThe CEO was taken aback by this statement. This was a once in a blue moon incident that could potentially cost the company millions in revenue.\r\n\r\n\u201CDiagnose the servers and get back to me, quick.\u201D he ordered.\r\n\r\n\u201CSir, we are helpless. It\u2019s a DDoS attack.\u201D\r\n\r\n\r\nThe CEO jumped up from his chair in disbelief. He knew this wasn\u2019t a normal outage that could be fixed by his engineers. As bizarre as it may sound, the tech giant, Twitter, was hacked by a group of unknown miscreants. Within the next hour, more news from across the Bay Area came pouring in. Besides Twitter, giants like Spotify, Reddit, GitHub and several hundred companies were victims of this extensive attack. As the fateful day unfolded, this outage continued with unpredictable patterns and lasted several hours, causing massive international digital revenue losses. \r\n\r\n\r\nFast-forward to 2021 and DDoS still remains a key threat to internet security. So then, what is a DDoS attack, and why is it nearly impossible to prevent? In its entirety, DDoS stands for Distributed Denial of Service. It is a malicious attempt to take down a website by targeting its web server with a tremendous amount of garbage requests so that it gets overwhelmed and stops responding to legitimate requests. \r\n\r\nTo understand it in plain terms, consider a website\u2019s regular internet traffic as some volume of water. Here, the web server acts as a dam to regulate the flow of internet traffic. However, if an excess amount of water floods the dam (server), it would try to prevent the stream (website) from being overwhelmed by automatically shutting down its service to any website requests. Such situations rarely occur thanks to the massive capacity (bandwidth) of current servers which lets them handle multiple requests in a given timeframe. However, if someone manages to mobilize millions of devices, with each device bombarding hundreds of illegitimate requests per second, the server crashes. This attack is known as DDoS.\r\n\r\n\r\nHold up, how can someone possibly own millions of electronic devices? Well, behind the scenes, a hacker installs malicious software and takes control of devices like old computers or cell phones which have an outdated security architecture. However, the Twitter DDoS attack was quite different from previous such attacks \u2014 the hacked devices (known as bot-net) used to carry out the operation weren\u2019t regular computers or cell phones with internet connectivity. They were household IoT devices like security cameras, floor-cleaners, and smart-bulbs, making it insanely difficult to trace the source of this attack.\r\n\r\nBut wait, did I mention what an IoT device is? Internet of Things devices are electronic appliances with an active connection to the internet, through which they can exchange and retrieve information from networks. This ability enables them to be custom-tailored to the user\u2019s needs and makes the transition from the digital world to your everyday tasks seamless. For instance, imagine if you had a trimmer that could keep track of your last shave and the growth of your beard thereafter. It would then tell you when you need to shave to maintain a constant stubble. That would be pretty neat, wouldn\u2019t it? This is just a small example of how such devices have the potential to change your life for the better.\r\n\r\nUnfortunately, on the down side, IoT devices are extremely vulnerable to DDoS attacks. In spite of major advancements in the industry, the security in most of these devices is worse than a 2001-release Windows XP computer. The question that therefore arises is, why aren\u2019t the IoT devices, and in theory, the entire internet, safe from these malicious acts?\r\n\r\nThis is primarily because IoT devices aren\u2019t backed with proper security and firewall architecture. Manufacturers are always looking to make these devices as compact as possible, which occurs at the cost of proper hardware and doesn\u2019t allow for software upgrades. This renders the devices obsolete against new types of malware that may originate in the future. The users of these devices are also liable to share a part of the blame. They often tend to ignore necessary protocol such as changing the default password of the device and making sure that software upgrades are installed in a timely fashion. Some IoT devices are also hosted on open\/public networks, making their URLs easily accessible to hackers.\r\n\r\nTo prevent these attacks from materializing in the future, security features of IoT devices should be enhanced. This could consequently give rise to third-party firms and companies dedicated to design hardware catering to specific devices. Manufacturers would thus have the option to outsource these development tasks to concerned companies and would hence not be required to change their manufacturing process. However, all these plans would be in vain if the manufacturer is not reprimanded by a proper governing body in case they were to skip adding firewall measures or possess underwhelming security features. \r\n\r\n\r\nThankfully, such a body is already in place. It is known as the IoT Security Council, but it is not doing its job as per expectations. The body is set up as an advisory body and is thus unable to regulate the industries. Consider this body as analogous to the SEBI before the 1992 Harshad Mehta scam; it provides guidelines for smooth conduct, but to accept and implement them is more of a choice rather than compulsion. For change to happen, this body must have a sterner outlook towards defaulters, enabling them to actually strongarm the manufacturers.\r\n\r\nHaving said that, everything boils down to collective responsibility. The manufacturers, the authority, and the clients must exercise their part of the process to assemble the security puzzle. Till this happens, I would recommend you to save and share this article right now before this website is down with a DDoS attack."
+  }

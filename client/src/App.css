@@ -108,3 +108,35 @@ footer{
 .developed-with span{
   margin-right: 10px;
 }
+@media (max-width: 767px){
+  #home{
+    padding-bottom: 150px;
+  }
+  header{
+    padding-top: 60px !important;
+  }
+  .nav-profile{
+    transform: scale(2);
+    transform-origin: left;
+  }
+  nav svg{
+    transform: scale(2);
+    transform-origin: right;
+  }
+  .menu-modal.open{
+    transform: translateY(50px) scale(1.75);
+    padding-left: 175px;
+  }
+  .menu-modal{
+    padding-left: 175px;
+  }
+  footer{
+    position: fixed !important;
+    bottom: 0 !important;
+  }
+}
+@media(max-width: 375px){
+  .menu-modal, .menu-modal.open{
+    padding-left: 225px;
+  }
+}

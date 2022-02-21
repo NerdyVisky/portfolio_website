@@ -1,7 +1,7 @@
 #home {
   background-color: var(--primary-accent);
   width: 100%;
-  height: calc(100vh - 60px - 6vh);
+  min-height: calc(100vh - 60px - 6vh);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,4 +112,44 @@
 
 .icons-wrapper img:hover{
     transform: translateX(-5px);
+}
+
+@media (max-width: 767px){
+    .text-content{
+        margin-top: 150px;
+    }
+    .name-title{
+        width: 90%;
+    }
+    .name-title span{
+        padding: 50px 0px;
+        font-size: 3rem !important;
+    }
+    .dynamic-texts{
+        margin: 50px 0px;
+    }
+    .desc-home{
+        font-size: 2.5rem;
+    }
+    .icons-wrapper{
+        margin-left: -50px !important;
+    }
+}
+@media(max-width: 450px){
+    .name-title span{
+        font-size: 4rem !important;
+    }
+    .text-content{
+        margin-top: 170px;
+        width: 100% !important;
+    }
+    .resume-button{
+        transform: scale(1.5);
+        transform-origin: left;
+    }
+    .icons-wrapper{
+        padding-right: 30px;
+        transform: scale(1.5);
+    }
+
 }
