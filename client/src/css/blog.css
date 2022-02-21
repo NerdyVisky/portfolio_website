@@ -4,4 +4,57 @@
     position: relative;
     z-index: -25;
     min-height: calc(100vh - 60px - 6vh);
+    position: relative;
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--title-font);
+    font-size: 2rem;
+    color: white;
+}
+.featured-section{
+    height: 33vw;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -20;
+}
+.featured-illus{
+    height: 100%;
+}
+.featured-details{
+    width: 100%;
+    padding: 30px;
+    /* background: blue; */
+    position: relative;
+    z-index: -15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.featured-title h1{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.featured-authors{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75%;
+}
+.featured-content{
+    width: 90%;
+    text-align: justify;
+    margin-top: 20px;
+    height: 150px;
+    overflow: hidden;
+    font-family: 'Georgia', sans-serif;
+    font-size: 1.2rem;
 }

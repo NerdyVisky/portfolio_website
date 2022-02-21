@@ -15,3 +15,33 @@
     background: var(--secondary-accent);
     opacity: 0.8;
 }
+.author-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-accent);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: var(--title-font);
+}
+.author-avatar img{
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.author-name{
+    font-weight: bold;
+}
+.featured-read-more{
+    position: relative;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+.featured-read-more::before{
+    content: '';
+    width: 500px;
+    height: 3px;
+    background: var(--secondary-accent);
+    position: absolute;
+    top: 50%;
+    right: 100%;
+}

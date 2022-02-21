@@ -1,8 +1,9 @@
 const Author = ({author}) => {
+    console.log(author);
     return ( 
         <div className="author-block">
             <div className="author-avatar">
-                <img src={author.imageURL} alt="avatar" />
+                <img width="45px" src={author.imageURL} alt="avatar" />
             </div>
             <div className="author-details">
                 <div className="designation">
