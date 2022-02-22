@@ -1,5 +1,4 @@
 const Author = ({author}) => {
-    console.log(author);
     return ( 
         <div className="author-block">
             <div className="author-avatar">

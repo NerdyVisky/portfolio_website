@@ -2,7 +2,7 @@
     background-color: var(--primary-accent);
     width: 100%;
     position: relative;
-    z-index: -25;
+    z-index: 0;
     min-height: calc(100vh - 60px - 6vh);
     position: relative;
 }
@@ -141,14 +141,12 @@
     justify-content: space-between;
     flex-direction: column;
     border-radius: 5px;
-    pointer-events: none;
 }
 .blog-illus{
     width: 100%;
 }
 .blog-illus img{
     border-radius: 5px 5px 0px 0px;
-    pointer-events: none;
 }
 .blog-details{
     font-family: 'Georgia', sans-serif;
@@ -157,6 +155,10 @@
 }
 .blog-details h1{
     margin-bottom: 10px;
+    cursor: pointer;
+}
+.blog-details h1:hover{
+    text-decoration: underline;
 }
 .blog-details span{
     padding: 5px;
@@ -168,6 +170,9 @@
     font-family: 'Georgia', sans-serif;
     font-weight: bold;
     background: var(--secondary-accent);
+    cursor: pointer !important;
+    position: relative;
+    z-index: 50;
 }
 
 @media (max-width: 1200px){

@@ -16,6 +16,7 @@ import NotFound from "./Pages/NotFound";
 import Navbar from "./Components/Navbar";
 import MenuModal from "./Components/MenuModal";
 import Footer from "./Components/Footer";
+import IndividualBlog from "./Pages/IndividualBlog";
 
 class App extends Component {
   constructor(props){
@@ -45,7 +46,8 @@ class App extends Component {
         <MenuModal openState={this.state.isMenuOpen} onPress={this.toggleMenu}/>
         <Navbar vw={this.state.vw} onPress={this.toggleMenu} style={{position: 'fixed', top: 0}}/>
         <Routes>
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<Blog />}/>
+          <Route path="/blog/:slug" element={<IndividualBlog />}/>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<Home />} />

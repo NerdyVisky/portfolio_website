@@ -1,15 +1,17 @@
 import { useRef, useEffect, useState } from 'react';
-import {motion} from 'framer-motion';
 import '../css/blog.css'
 import Author from '../Components/Author';
 import BlogCard from '../Components/BlogCard';
 import '../css/custom.css'
+import { useNavigate } from 'react-router-dom';
 
 const Blog = () => {
     const API_URL = 'http://localhost:8000/api/blogs';
     const [blogs, setBlogs] = useState([]);
     const [blogsLoaded, setBlogsLoaded] = useState(false);
     const blog = blogs[0];
+    const navigateTo = useNavigate();
+    
     useEffect(() => {
         fetch(API_URL)
         .then(res => res.json())
@@ -19,6 +21,8 @@ const Blog = () => {
     }, [])
     let blogJSX = null;
     if(blogsLoaded){
+        const slug = blog.slug;
+        const blogURL = "/blog/" + slug;
         blogJSX = 
         <>
         <div className="featured-section">
@@ -38,18 +42,18 @@ const Blog = () => {
                     <p>{blog.main_content}</p>
                 </div>
                 <div className="featured-read-more">
-                    <h2 className="highlight">Read More</h2>
+                    <h2 onClick={() => {navigateTo(blogURL)}} className="highlight">Read More</h2>
                 </div>
             </div>
         </div>
         <div className="all-blogs-explore"><h1>Explore Blogs</h1></div>
-        <motion.div className="carousel">
-            <motion.div drag="x" className="inner-carousel">
+        <div className="carousel">
+            <div className="inner-carousel">
                 {blogs.map((blog, index) => {
                     return(<BlogCard key={blog._id} blog={blog}/>)
                 })}
-            </motion.div>
-        </motion.div>
+            </div>
+        </div>
         </>
     }else{
         blogJSX = <div className='loader'>Hold up, amazing content on the way!</div>
