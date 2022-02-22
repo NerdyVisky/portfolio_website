@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import {motion} from 'framer-motion';
 import '../css/blog.css'
-import nftImgURL from '../assets/img/nft.png';
 import Author from '../Components/Author';
+import BlogCard from '../Components/BlogCard';
 import '../css/custom.css'
 
 const Blog = () => {
@@ -19,6 +20,7 @@ const Blog = () => {
     let blogJSX = null;
     if(blogsLoaded){
         blogJSX = 
+        <>
         <div className="featured-section">
             <div className="featured-illus">
                 <img src={blog.illustrationLink} alt="" />
@@ -40,6 +42,15 @@ const Blog = () => {
                 </div>
             </div>
         </div>
+        <div className="all-blogs-explore"><h1>Explore Blogs</h1></div>
+        <motion.div className="carousel">
+            <motion.div drag="x" className="inner-carousel">
+                {blogs.map((blog, index) => {
+                    return(<BlogCard key={blog._id} blog={blog}/>)
+                })}
+            </motion.div>
+        </motion.div>
+        </>
     }else{
         blogJSX = <div className='loader'>Hold up, amazing content on the way!</div>
     }

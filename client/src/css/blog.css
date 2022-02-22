@@ -61,6 +61,114 @@
     font-family: 'Georgia', sans-serif;
     font-size: 1.2rem;
 }
+.all-blogs-explore{
+    /* background: red; */
+    width: 100%;
+}
+.all-blogs-explore h1{
+    margin: 30px 0px;
+    padding-left: 3vw;
+    font-family: 'Georgia', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    position: relative;
+    width: max-content;
+}
+.all-blogs-explore h1::after{
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 105%;
+    width: 70vw;
+    height: 3px;
+    background: var(--secondary-accent);
+}
+@media (max-width: 950px) {
+    .all-blogs-explore h1::after{
+        width: 50vw;
+    }
+    
+}
+@media (max-width: 650px) {
+    .all-blogs-explore h1::after{
+        width: 22vw;
+    }
+    
+}
+.carousel{
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.inner-carousel{
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+@media(min-width: 1600px){
+    .inner-carousel{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 1250px){
+    .inner-carousel{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 950px){
+    .inner-carousel{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+@media (max-width: 650px){
+    .inner-carousel{
+        grid-template-columns: 1fr;
+    }
+}
+.blog-card{
+    /* background: blue; */
+    background: white;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 5px;
+    pointer-events: none;
+}
+.blog-illus{
+    width: 100%;
+}
+.blog-illus img{
+    border-radius: 5px 5px 0px 0px;
+    pointer-events: none;
+}
+.blog-details{
+    font-family: 'Georgia', sans-serif;
+    margin: 10px 20px;
+    color: var(--primary-accent);
+}
+.blog-details h1{
+    margin-bottom: 10px;
+}
+.blog-details span{
+    padding: 5px;
+    font-weight: bold;
+}
+.read-more{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-family: 'Georgia', sans-serif;
+    font-weight: bold;
+    background: var(--secondary-accent);
+}
 
 @media (max-width: 1200px){
     #blog{
