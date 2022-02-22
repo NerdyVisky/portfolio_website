@@ -42,7 +42,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <MenuModal openState={this.state.isMenuOpen}/>
+        <MenuModal openState={this.state.isMenuOpen} onPress={this.toggleMenu}/>
         <Navbar vw={this.state.vw} onPress={this.toggleMenu} style={{position: 'fixed', top: 0}}/>
         <Routes>
           <Route path="/blog" element={<Blog />} />

@@ -1,6 +1,6 @@
 import {NavLink} from 'react-router-dom';
 
-const MenuModal = ({openState}) => {
+const MenuModal = ({openState, onPress}) => {
   let classes = "menu-modal";
   if(openState){
       classes += " open";
@@ -14,6 +14,7 @@ const MenuModal = ({openState}) => {
             color: isActive ? "#FFD369" : "#ffffff",
           })}
           className="menu-link"
+          onClick={onPress}
         >
           home()
         </NavLink>
@@ -23,6 +24,7 @@ const MenuModal = ({openState}) => {
             color: isActive ? "#FFD369" : "#ffffff",
           })}
           className="menu-link"
+          onClick={onPress}
         >
           blog()
         </NavLink>
@@ -32,6 +34,7 @@ const MenuModal = ({openState}) => {
             color: isActive ? "#FFD369" : "#ffffff",
           })}
           className="menu-link"
+          onClick={onPress}
         >
           about()
         </NavLink>
@@ -41,9 +44,13 @@ const MenuModal = ({openState}) => {
             color: isActive ? "#FFD369" : "#ffffff",
           })}
           className="menu-link"
+          onClick={onPress}
         >
           contact()
         </NavLink>
+        <div className="developed-by-menu">
+        Developed by Vishvesh Trivedi
+      </div>
       </nav>
     </div>
   );

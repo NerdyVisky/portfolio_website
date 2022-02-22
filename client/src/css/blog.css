@@ -28,6 +28,9 @@
 .featured-illus{
     height: 100%;
 }
+.featured-illus img{
+    height: 100%;
+}
 .featured-details{
     width: 100%;
     padding: 30px;
@@ -57,4 +60,41 @@
     overflow: hidden;
     font-family: 'Georgia', sans-serif;
     font-size: 1.2rem;
+}
+
+@media (max-width: 1200px){
+    #blog{
+        min-height: auto !important;
+        height: auto;
+        width: 100vw !important;
+    }
+    .featured-section{
+       flex-direction: column;
+       height: auto;
+       width: 100vw;
+    }
+    .featured-illus{
+        width: 100%;
+    }
+    .featured-illus img{
+        width: 100%;
+        height: auto;
+    }
+    .featured-details{
+        width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .featured-authors{
+        flex-direction: column;
+    }
+    .featured-authors>*{
+        /* margin: 5px 0px !important; */
+        transform: scale(0.8);
+    }
+}
+@media (max-width: 500px) {
+    .featured-title h1{
+        font-size: 1.75rem;
+    }
 }

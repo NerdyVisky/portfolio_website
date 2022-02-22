@@ -21,7 +21,7 @@ const Blog = () => {
         blogJSX = 
         <div className="featured-section">
             <div className="featured-illus">
-                <img height="100%"src={blog.illustrationLink} alt="" />
+                <img src={blog.illustrationLink} alt="" />
             </div>
             <div className="featured-details">
                 <div className="featured-title"><h1 className="highlight">{blog.title}</h1></div>
