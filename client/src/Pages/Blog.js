@@ -8,11 +8,13 @@ import { useNavigate } from 'react-router-dom';
 const Blog = () => {
     const API_URL = 'http://localhost:8000/api/blogs';
     const [blogs, setBlogs] = useState([]);
-    const [blogsLoaded, setBlogsLoaded] = useState(false);
+    const [blogsLoaded, setBlogsLoaded] = useState(false);  
     const blog = blogs[0];
     const navigateTo = useNavigate();
     
     useEffect(() => {
+        window.scroll(0, 0);
+        document.title = "Blog | Vishvesh Trivedi"
         fetch(API_URL)
         .then(res => res.json())
         .then(data => setBlogs(data))

@@ -4,8 +4,13 @@ import githubIconURL from '../assets/img/github.svg';
 import codepenIconURL from '../assets/img/codepen.svg';
 import linkedinIconURL from '../assets/img/linkedin.svg';
 import downloadIconURL from '../assets/img/Insert.png'
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+    document.title = 'Home | Vishvesh Trivedi'
+  }, [])
   return (
     <div id="home">
       <div className="home-left">

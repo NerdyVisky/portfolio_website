@@ -9,16 +9,25 @@ const IndividualBlog = () => {
     const [blogLoaded, setBlogLoaded] = useState(false);
     let {slug} = useParams();
     let API_URL = 'http://localhost:8000/api/blogs/' + slug;
+    function addParagraph(content){
+        let contentArr = content.split('<br/>');
+        return contentArr;
+    }
     useEffect(() => {
+        window.scroll(0, 0);
         fetch(API_URL)
         .then(res => res.json())
-        .then(blog => setBlog(blog))
+        .then(blog => {
+            setBlog(blog);
+            document.title = blog[0].title;
+        })
         .then(() => setBlogLoaded(true))
         .catch(err => console.log(err));
     }, [])
     let pageJSX = null;
     if(blogLoaded){
-        if(blog.length != 0){
+        let paras = addParagraph(blog[0].main_content);
+        if(blog.length !== 0){
             pageJSX = 
             <div className="blog-page">
             <div className="main-blog-title">
@@ -34,7 +43,9 @@ const IndividualBlog = () => {
                 <h3 className="disclaimer">NOTE : This illustration is owned by Renesa SVNIT.</h3>
             </div>
             <div className="blog-main-content">
-                {blog[0].main_content}
+                {paras.map((para, i) => {
+                    return(<p>{para}<br/></p>)
+                })}
             </div>
             <div className="tags">
                 {blog[0].tags.map((tag, index) => {
