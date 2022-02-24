@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Blog from "./Pages/Blog";
 import About from "./Pages/About";
-import Contact from "./Pages/Contact";
+import Hire from "./Pages/Hire";
 import NotFound from "./Pages/NotFound";
 
 //importing App Components
@@ -49,7 +49,7 @@ class App extends Component {
           <Route path="/blog" element={<Blog />}/>
           <Route path="/blog/:slug" element={<IndividualBlog />}/>
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/hire" element={<Hire />} />
           <Route path="/" element={<Home />} />
           <Route path="/*"element={<NotFound />} />
         </Routes>

@@ -1,0 +1,127 @@
+#hire {
+    background-color: var(--primary-accent);
+    width: 100%;
+    min-height: calc(100vh - 60px - 6vh);
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+  }
+  .quotation-form{
+      width: 100%;
+      /* background: red; */
+      display: flex;
+      /* height: 500px; */
+  }
+  .quotation-form-left{
+      /* background: blue; */
+      padding: 30px;
+      flex: 1;
+  }
+  .quotation-form-left h1{
+      font-size: 4vw;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: var(--secondary-accent);
+      margin-bottom: 15px;
+  }
+  .quotation-form-left h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 2.5vw;
+    margin-bottom: 25px;
+  }
+  .quotation-form-left h4{
+      font-family: var(--title-font);
+      font-style: italic;
+      font-size: 1rem;
+      font-weight: 500;
+  }
+  .quotation-form-right{
+      flex: 1;
+      background: var(--secondary-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 30px 0px;
+  }
+  .form-title{
+      background: var(--primary-accent);
+      margin-bottom: 25px;
+      padding: 10px 20px;
+      width: 100%;
+  }
+  .form-title h1{
+    font-size: 3vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+  }
+  .quotation-form-right form{
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: var(--primary-accent);
+      /* background: red; */
+  }
+  input[type="text"], input[type="email"]{
+      width: 80%;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1.2rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border-radius: 5px;
+  }
+  .quotation-form-right form>*{
+      margin-bottom: 15px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+  }
+ form .requirement-type-block{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     /* background: red; */
+     padding: 15px 20px;
+     width: 90%;
+     background: white;
+ }
+ form .requirement-type-block .item{
+     margin: 10px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: 1.1rem;
+ }
+ input[type="checkbox"]{
+     margin-right: 5px;
+     transform: scale(1.5);
+ }
+ .quotation-form-right form textarea{
+     width: 100%;
+     border: none;
+     min-height: 150px;
+     padding: 20px;
+     resize: none;
+     font-size: 1.1rem;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     border-radius: 5px;
+ }
+ input[type="submit"]{
+     width: 75%;
+     margin-top: 10px;
+     min-width: 200px;
+     padding: 15px 30px;
+     font-size: 1.35rem;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     background: var(--primary-accent);
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     color: white;
+     cursor: pointer;
+ }

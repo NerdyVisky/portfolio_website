@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 import profileImgURL from "../assets/img/profile_img.jpeg";
-const activeStyle = { color: "#FFD369" };
 const Navbar = ({vw, onPress}) => {
    let element = null;
    let profileSize = "60px";
@@ -32,12 +31,12 @@ const Navbar = ({vw, onPress}) => {
          about()
        </NavLink>
        <NavLink
-         to="/contact"
+         to="/hire"
          style={({ isActive }) => ({
            color: isActive ? "#FFD369" : "#ffffff",
          })}
        >
-         contact()
+         hire()
        </NavLink>
      </nav>;
    }else{
