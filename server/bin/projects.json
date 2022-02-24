@@ -1,0 +1,16 @@
+{
+  "name": "Phantom Rooms",
+  "imgURL": "https://docs.google.com/uc?id=1CJMmVCd6AmyO8dIyjkb-_wi8-3OPogjP",
+  "description": "Anonymous chat rooms web application built under Hack NITR 3.0 hackathon (Dec 2021)",
+  "docsLink": [
+    {
+      "logoURL": "https://docs.google.com/uc?id=1CJMmVCd6AmyO8dIyjkb-_wi8-3OPogjP",
+      "hrefLink": "https://www.google.com"
+    },
+    {
+      "logoURL": "https://docs.google.com/uc?id=1CJMmVCd6AmyO8dIyjkb-_wi8-3OPogjP",
+      "hrefLink": "https://www.facebook.com"   
+    }
+  ],
+  "hostLink" : "https://www.github.com"
+}

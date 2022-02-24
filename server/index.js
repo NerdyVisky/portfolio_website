@@ -3,7 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
-const APIroutes = require('./routes/blogsAPI');
+const blogsRouter = require('./routes/blogsAPI');
+const projectsRouter = require('./routes/projectsAPI');
 const cors = require('cors');
 
 //creating express app instance
@@ -34,7 +35,8 @@ app.get('/', (req, res) => {
     res.send("Common Users Page");
 });
 // Importing API Routes
-app.use('/api/blogs', APIroutes);
+app.use('/api/blogs', blogsRouter);
+app.use('/api/projects', projectsRouter);
 
 
 

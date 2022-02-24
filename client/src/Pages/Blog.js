@@ -1,9 +1,10 @@
 import { useRef, useEffect, useState } from 'react';
-import '../css/blog.css'
+import { useNavigate } from 'react-router-dom';
 import Author from '../Components/Author';
 import BlogCard from '../Components/BlogCard';
 import '../css/custom.css'
-import { useNavigate } from 'react-router-dom';
+import '../css/blog.css'
+import loaderGIF from '../assets/img/loader.gif'
 
 const Blog = () => {
     const API_URL = 'http://localhost:8000/api/blogs';
@@ -58,7 +59,12 @@ const Blog = () => {
         </div>
         </>
     }else{
-        blogJSX = <div className='loader'>Hold up, amazing content on the way!</div>
+        blogJSX = 
+         <div className='loader'>
+             <img width="100px"src={loaderGIF} alt="" />
+             <h1>Getting your feed ready...</h1>
+          </div>
+
     }
     return ( 
     <div id="blog">
