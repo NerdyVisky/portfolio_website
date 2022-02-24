@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../css/hire.css";
+const API_URL = 'http://localhost:8000/form'
 class Hire extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +15,7 @@ class Hire extends Component {
           other: false,
         },
         additionals: "",
-      },
+      }
     };
   }
   handleToggle = (e) => {
@@ -27,6 +28,33 @@ class Hire extends Component {
     this.setState((prevState) => ({
       data : {...prevState.data, [e.target.name] : e.target.value}
     }));
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    fetch(API_URL, {
+     method : 'POST',
+     headers : {
+       'Content-Type' : 'application/json',
+     },
+     body : JSON.stringify(this.state.data)
+    })
+    .then(res => res.json())
+    .then(data => this.postSubmit(data.message))
+    .catch(err => console.log(err));
+  }
+  postSubmit = (message) => {
+    alert(message);
+    this.setState({data: {
+      name: "",
+      email: "",
+      requirements: {
+        ecommerce: false,
+        portfolio: false,
+        blog: false,
+        other: false,
+      },
+      additionals: "",
+    }})
   }
   render() {
     return (
@@ -45,7 +73,7 @@ class Hire extends Component {
             <div className="form-title">
               <h1>Get in touch!</h1>
             </div>
-            <form action="">
+            <form onSubmit={this.handleSubmit}>
               <label htmlFor="full-name">
                 <input
                   type="text"
@@ -113,7 +141,7 @@ class Hire extends Component {
                   onChange={this.handleInputChange}
                 />
               </label>
-              <input type="submit" value="Request Quotation" />
+              <input type="submit" value="Request Quotation"/>
             </form>
           </div>
         </div>

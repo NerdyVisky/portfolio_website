@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const blogsRouter = require('./routes/blogsAPI');
 const projectsRouter = require('./routes/projectsAPI');
+const formRouter = require('./routes/formAPI');
 const cors = require('cors');
 
 //creating express app instance
@@ -29,14 +30,15 @@ app.get('/admin', (req, res) => {
 
 
 
-
-
 app.get('/', (req, res) => {
     res.send("Common Users Page");
 });
+
+
 // Importing API Routes
 app.use('/api/blogs', blogsRouter);
 app.use('/api/projects', projectsRouter);
+app.use('/form', formRouter);
 
 
 
