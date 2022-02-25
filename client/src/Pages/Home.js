@@ -33,7 +33,7 @@ const Home = () => {
           </h5>
         </div>
         <div className="resume-button">
-          <a target="_blank" href="https://doc-0k-90-docs.googleusercontent.com/docs/securesc/6b40ck1oqtud3qbvb4afa5dphj31e4pm/bf5se032qkh63vfjdmj481nprqvo5pqg/1645807575000/13604834509161394008/13604834509161394008/1fK6any7_FPBtB_qusDdUSBdrYztJ_Cab?ax=ACxEAsbou0yuVyeFJmSwObvHFpbLnY9BuwwJpPKIJERpMb3vpX0hwCF1dXEFkzKZNx6onvuemLrtNhq69SMWCpvW7PCv_VamHYCnZTQxIyGa45EEWuaEDtQGr6YxPY2GPpwzry8OSidKKnP9WkQ_hKSFqRM7-jaICHJaviaCsg1QfkAuWxOzFo-gKkVRQNP2qChDFOoq_dcmBXKFDg12QlMF9MH7dahN9IqCImMa7M704k1-kFYq5i8eYmSHRp_UyXlm-JWbimAMRLmk4FU8Xb9WBNevaVVtrf3Hp3gLcd0y2becYrBPOAi15NUfupRgkM335e7xeOnz6jxsYfnZiYj18isrWXXRcRQjZj5V6yDTCmavC7AWweQENL68DyIuO6nR1etAl5u_ywL2wgNoSp_JLDx8q87VOu95d014oQlEj3FM7dskPbjAvGoKLYinx6YYFXmbT8kUuBUK_zjsLJnE0mVzGssbdjc9XG3TcOpJvXmGdGydZapx5Lju7Lqw5PXruSwyABOxsPIFR5V-MdFLIjeSG3iw0pn7-G7tTnIZ4xUOIyCoA0pcQGemPBdguc0t_7r7Zo7CYmFeb69fEVsKwbsOQfpc8gsRgNYVId20vHZlWax8ehTONRdaq4WxuM-rGEI1sP9rDtKHz2KaoyOUn7qFbZ4aHol98b4mhoo&authuser=0&nonce=voc4lk0ar37ng&user=13604834509161394008&hash=9t4alv532mp0mc0bi9jf0344a2bhju4e">
+          <a target="_blank" href="https://drive.google.com/file/d/1fK6any7_FPBtB_qusDdUSBdrYztJ_Cab/view?usp=sharing">
             <img width="45px" src={viewResumeURL} alt="" />
             <span>resume.pdf</span>
           </a>
