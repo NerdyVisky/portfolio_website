@@ -4,6 +4,8 @@ const API_URL = 'http://localhost:8000/form'
 class Hire extends Component {
   constructor(props) {
     super(props);
+    window.scroll(0, 0);
+    document.title = 'Hire | Vishvesh Trivedi'
     this.state = {
       data: {
         name: "",
