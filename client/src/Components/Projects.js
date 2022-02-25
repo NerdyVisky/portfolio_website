@@ -30,8 +30,9 @@ const Projects = () => {
                     </div>
                     <div className="project-links">
                         <div className="docs-links">
-                            <a target="_blank" href={project.docsLink[0].hrefLink}><img height="35px"width="35px"src={project.docsLink[0].logoURL} alt="docs logo" /></a>
-                            <a target="_blank" href={project.docsLink[1].hrefLink}><img height="35px"width="35px" src={project.docsLink[1].logoURL} alt="docs logo" /></a>
+                            {project.docsLink.map((link, index) => {
+                            return(<a key={index} target="_blank" href={link.hrefLink}><img height="35px"width="35px"src={link.logoURL} alt="docs logo" /></a>)
+                            })}
                         </div>
                         <div className="host-link">
                             {project.hostLink ? <a target="_blank" href={project.hostLink}><img src={hostLogoURL} width="35px" alt="docs logo" /><span>View Site</span> </a> : <div className="in-progress">In progress</div>}

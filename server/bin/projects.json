@@ -1,16 +1,12 @@
 {
-  "name": "Phantom Rooms",
-  "imgURL": "https://docs.google.com/uc?id=1CJMmVCd6AmyO8dIyjkb-_wi8-3OPogjP",
-  "description": "Anonymous chat rooms web application built under Hack NITR 3.0 hackathon (Dec 2021)",
+  "name": "Krishna Hospital Website",
+  "imgURL": "https://docs.google.com/uc?id=1zeIKOAxNGMrNemfLKFwDuXQoJQ65g4bt",
+  "description": "Desktop-first, mobile-also static front-end website with online appointment booking for one of the most reputed gynec hospitals in Ahmedabad.",
   "docsLink": [
     {
-      "logoURL": "https://docs.google.com/uc?id=1CJMmVCd6AmyO8dIyjkb-_wi8-3OPogjP",
-      "hrefLink": "https://www.google.com"
-    },
-    {
-      "logoURL": "https://docs.google.com/uc?id=1CJMmVCd6AmyO8dIyjkb-_wi8-3OPogjP",
-      "hrefLink": "https://www.facebook.com"   
+      "logoURL": "https://docs.google.com/uc?id=1uvCyXDWSoM1T3ossbqFYCxTF-5uvQri5",
+      "hrefLink": "https://www.instagram.com/p/CS6dlT5sLsw/"
     }
   ],
-  "hostLink" : "https://www.github.com"
+  "hostLink" : "https://krishnawomenhospital.com/"
 }

@@ -43,7 +43,7 @@
   align-self: flex-end;
 }
 
-.resume-button{
+.resume-button a{
     display: inline-flex;
     align-items: center;
     justify-content: center;

@@ -27,6 +27,18 @@ router.post('/', adminRouteAuth, async (req, res) => {
     }
 });
 
+router.delete('/:id', adminRouteAuth, (req, res) => {
+    Projects.findByIdAndDelete(req.params.id)
+    .then(data => res.send(`Deleted : ${data}`))
+    .catch(err => res.send(err))
+});
+
+router.put('/:id', adminRouteAuth, (req, res) => {
+    Projects.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then(data => res.send(`Updated : ${data}`))
+    .catch(err => res.send(err))
+});
+
 
 //Admin auth middleware function
 function adminRouteAuth(req, res, next){

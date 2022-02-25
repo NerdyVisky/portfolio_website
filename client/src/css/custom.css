@@ -45,3 +45,21 @@
     top: 50%;
     right: 100%;
 }
+#not-found{
+    padding-top: 100px;
+    min-height: calc(100vh - 60px - 6vh);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#not-found img{
+    width: 30vw;
+    margin-bottom: 20px;
+}
+#not-found h2{
+    font-size: 2rem;
+    color: white;
+    font-family: var(--title-font);
+}
