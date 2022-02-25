@@ -44,7 +44,7 @@ const IndividualBlog = () => {
             </div>
             <div className="blog-main-content">
                 {paras.map((para, i) => {
-                    return(<p>{para}<br/></p>)
+                    return(<p key={i}>{para}<br/></p>)
                 })}
             </div>
             <div className="tags">

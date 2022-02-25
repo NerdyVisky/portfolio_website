@@ -39,14 +39,14 @@ const MenuModal = ({openState, onPress}) => {
           about()
         </NavLink>
         <NavLink
-          to="/contact"
+          to="/hire"
           style={({ isActive }) => ({
             color: isActive ? "#FFD369" : "#ffffff",
           })}
           className="menu-link"
           onClick={onPress}
         >
-          contact()
+          hire()
         </NavLink>
         <div className="developed-by-menu">
         Developed by Vishvesh Trivedi

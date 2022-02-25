@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Projects from "../Components/Projects";
 import "../css/hire.css";
 const API_URL = 'http://localhost:8000/form'
 class Hire extends Component {
@@ -76,6 +77,7 @@ class Hire extends Component {
               <h1>Get in touch!</h1>
             </div>
             <form onSubmit={this.handleSubmit}>
+              <div className="form-block-1">
               <label htmlFor="full-name">
                 <input
                   type="text"
@@ -96,6 +98,7 @@ class Hire extends Component {
                   onChange={this.handleInputChange}
                 />
               </label>
+              </div>
               <div className="requirement-type-block">
                 <div className="item">
                   <input
@@ -146,6 +149,10 @@ class Hire extends Component {
               <input type="submit" value="Request Quotation"/>
             </form>
           </div>
+        </div>
+        <div className="projects">
+          <h1 className="projects-title">Recent Work</h1>
+          <Projects/>
         </div>
       </div>
     );

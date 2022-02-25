@@ -1,0 +1,70 @@
+.projects-container{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project-card{
+    /* background: blue; */
+    background: white;
+    width: 275px;
+    margin-right: 20px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+.project-img{
+    width: 100%;
+}
+.project-img img{
+    border-radius: 5px 5px 0px 0px;
+}
+.project-details{
+    font-family: 'Georgia', sans-serif;
+    margin: 10px 20px;
+    color: var(--primary-accent);
+    margin-bottom: 25px;
+}
+.project-details h1{
+    margin-bottom: 10px;
+}
+.project-links{
+    width: 100%;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.docs-links>*{
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.docs-links>* img{
+    border-radius: 50%;
+}
+.host-link a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    background: white;
+    box-shadow: 0px 0px 10px rgb(187, 187, 187);
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-family: var(--title-font);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+}
+.host-link a img{
+    margin-right: 5px;
+}
+.host-link a span:hover{
+    text-decoration: underline;
+}
