@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Projects from "../Components/Projects";
 import "../css/hire.css";
-const API_URL = 'http://localhost:8000/form'
+const API_URL = '/form'
 class Hire extends Component {
   constructor(props) {
     super(props);

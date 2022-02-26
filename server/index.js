@@ -24,15 +24,6 @@ app.use(cors({origin : '*'}));
 //creating the backend express server
 const PORT = process.env.PORT || 8800;
 app.listen(PORT, () => {console.log(`Server has started at PORT ${PORT}`)});
-app.get('/admin', (req, res) => {
-    res.sendFile('admin.html', {root: __dirname + '/views'});
-})
-
-
-
-app.get('/', (req, res) => {
-    res.send("Common Users Page");
-});
 
 
 // Importing API Routes
@@ -41,6 +32,13 @@ app.use('/api/projects', projectsRouter);
 app.use('/form', formRouter);
 
 
+//Serve static assets when in production
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+}
 
 // Connect Database
 mongoose.set('debug', true);

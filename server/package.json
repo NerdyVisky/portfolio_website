@@ -4,8 +4,9 @@
   "description": "Backend codebase for portolio website and blog",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "dev": "nodemon bin/dev"
+    "start": "node index.js",
+    "dev": "nodemon bin/dev",
+    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Vishvesh Trivedi",
   "license": "ISC",

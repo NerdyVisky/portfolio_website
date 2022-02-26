@@ -8,7 +8,7 @@ const IndividualBlog = () => {
     const [blog, setBlog] = useState([]);
     const [blogLoaded, setBlogLoaded] = useState(false);
     let {slug} = useParams();
-    let API_URL = 'http://localhost:8000/api/blogs/' + slug;
+    let API_URL = '/api/blogs/' + slug;
     function addParagraph(content){
         let contentArr = content.split('<br/>');
         return contentArr;
