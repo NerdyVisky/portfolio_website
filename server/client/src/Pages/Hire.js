@@ -107,7 +107,7 @@ class Hire extends Component {
                     name="ecommerce"
                     onChange={this.handleToggle}
                   />
-                  E-commerce Website
+                 <span>E-commerce Website</span>
                 </div>
                 <div className="item">
                   <input
@@ -116,7 +116,7 @@ class Hire extends Component {
                     name="portfolio"
                     onChange={this.handleToggle}
                   />
-                  Portfolio Website
+                 <span>Portfolio Website</span>
                 </div>
                 <div className="item">
                   <input
@@ -125,7 +125,7 @@ class Hire extends Component {
                     name="blog"
                     onChange={this.handleToggle}
                   />
-                  Static Business Website
+                 <span>Static Business Website</span>
                 </div>
                 <div className="item">
                   <input
@@ -134,7 +134,7 @@ class Hire extends Component {
                     name="other"
                     onChange={this.handleToggle}
                   />
-                  Other
+                 <span>Other</span>
                 </div>
               </div>
               <label htmlFor="add-req">

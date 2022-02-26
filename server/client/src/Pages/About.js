@@ -27,7 +27,7 @@ const About = () => {
           </div>
           <div className="about-para">
             <p>
-              I am a full-stack web developer and an UI/UX designer based out of
+              I am a full-stack web developer and a UI/UX designer based out of
               Ahmedabad. In parallel to pursuing B.Tech. in Computer Science
               Engineering from NIT Surat, I freelance by making websites,
               designing interfaces, and building SaaS in general. Besides, I

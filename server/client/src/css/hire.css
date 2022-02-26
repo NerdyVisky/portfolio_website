@@ -179,6 +179,13 @@
         justify-content: center;
         flex-direction: column;
     }
+    form .requirement-type-block .item{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
     .form-block-1{
         flex-direction: column;
     }

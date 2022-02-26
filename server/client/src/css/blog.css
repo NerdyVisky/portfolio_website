@@ -181,8 +181,7 @@
 
 @media (max-width: 1200px){
     #blog{
-        min-height: auto !important;
-        height: auto;
+    min-height: calc(100vh - 60px - 6vh);
         width: 100vw !important;
     }
     .featured-section{
@@ -213,5 +212,8 @@
 @media (max-width: 500px) {
     .featured-title h1{
         font-size: 1.75rem;
+    }
+    .loader h1{
+        font-size: 1.2rem;
     }
 }
