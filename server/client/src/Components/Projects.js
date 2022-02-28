@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import hostLogoURL from '../assets/img/host-icon.png'
 import '../css/projects.css'
 
-const API_URL = '/api/projects';
+const API_URL = 'https://vishveshtrivedi.herokuapp.com/api/projects';
 const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [projectsLoaded, setProjectsLoaded] = useState(false);
