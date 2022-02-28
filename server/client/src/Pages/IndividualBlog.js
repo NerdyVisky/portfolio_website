@@ -8,7 +8,7 @@ const IndividualBlog = () => {
     const [blog, setBlog] = useState([]);
     const [blogLoaded, setBlogLoaded] = useState(false);
     let {slug} = useParams();
-    let API_URL = '/api/blogs/' + slug;
+    let API_URL = 'https://vishveshtrivedi.herokuapp.com/api/blogs/' + slug;
     function addParagraph(content){
         let contentArr = content.split('<br/>');
         return contentArr;
