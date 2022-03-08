@@ -7,15 +7,21 @@ const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [projectsLoaded, setProjectsLoaded] = useState(false);
     useEffect(() => {
-        fetch(API_URL)
-        .then(res => res.json())
-        .then(data => setProjects(data))
-        .then(() => setProjectsLoaded(true))
-        .catch(err => console.log(err))
+        if(sessionStorage.getItem('vishveshtrivedi_projects')){
+            setProjects(JSON.parse(sessionStorage.getItem('vishveshtrivedi_projects')));
+            setProjectsLoaded(true);
+        }else{
+            fetch(API_URL)
+            .then(res => res.json())
+            .then(data => {
+                setProjects(data);
+                sessionStorage.setItem('vishveshtrivedi_projects', JSON.stringify(data));
+            })
+            .then(() => setProjectsLoaded(true))
+            .catch(err => console.log(err))
+        }
+        
     }, [])
-    if(projectsLoaded){
-        console.log(projects);
-    }
     return ( 
         <div className="projects-container">
             {projectsLoaded && projects.map((project, index) => {

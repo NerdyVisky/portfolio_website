@@ -16,12 +16,20 @@ const Blog = () => {
     useEffect(() => {
         window.scroll(0, 0);
         document.title = "Blog | Vishvesh Trivedi"
-        fetch(API_URL)
+        if(sessionStorage.getItem('vishveshtrivedi_blogs')){
+            setBlogs(JSON.parse(sessionStorage.getItem('vishveshtrivedi_blogs')));
+            setBlogsLoaded(true);
+        }else{
+            fetch(API_URL)
         .then(res => res.json())
-        .then(data => setBlogs(data))
+        .then(data => {
+            setBlogs(data);
+            sessionStorage.setItem('vishveshtrivedi_blogs', JSON.stringify(data));
+        })
         .then(() => setBlogsLoaded(true))
         .catch(err => console.log(err)); 
-    }, [])
+        }
+    }, []);
     let blogJSX = null;
     if(blogsLoaded){
         const slug = blog.slug;
