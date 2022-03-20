@@ -10,7 +10,9 @@ const Blog = () => {
     const API_URL = 'https://vishveshtrivedi.herokuapp.com/api/blogs';
     const [blogs, setBlogs] = useState([]);
     const [blogsLoaded, setBlogsLoaded] = useState(false);  
-    const blog = blogs[0];
+    const blog = blogs.filter((blog, i) => {
+        return (blog.isFeatured);
+    })[0];
     const navigateTo = useNavigate();
     
     useEffect(() => {
@@ -60,7 +62,8 @@ const Blog = () => {
         <div className="all-blogs-explore"><h1>Explore Blogs</h1></div>
         <div className="carousel">
             <div className="inner-carousel">
-                {blogs.map((blog, index) => {
+                {
+                blogs.reverse().map((blog, index) => {
                     return(<BlogCard key={blog._id} blog={blog}/>)
                 })}
             </div>
