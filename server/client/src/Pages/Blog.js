@@ -7,7 +7,7 @@ import '../css/blog.css'
 import loaderGIF from '../assets/img/loader.gif'
 
 const Blog = () => {
-    const API_URL = 'https://vishveshtrivedi.herokuapp.com/api/blogs';
+    const API_URL = 'http://localhost:5000/api/blogs';
     const [blogs, setBlogs] = useState([]);
     const [blogsLoaded, setBlogsLoaded] = useState(false);  
     const blog = blogs.filter((blog, i) => {
