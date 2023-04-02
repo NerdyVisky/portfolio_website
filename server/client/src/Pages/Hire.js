@@ -1,64 +1,72 @@
-import React, { Component } from "react";
-import Projects from "../Components/Projects";
-import "../css/hire.css";
-const API_URL = 'http://localhost:5000/form'
+import React, { Component } from 'react';
+import Projects from '../Components/Projects';
+import '../css/hire.css';
+const API_URL = 'https://portfolio-website-7r8u.onrender.com/form';
 class Hire extends Component {
   constructor(props) {
     super(props);
     window.scroll(0, 0);
-    document.title = 'Hire | Vishvesh Trivedi'
+    document.title = 'Hire | Vishvesh Trivedi';
     this.state = {
       data: {
-        name: "",
-        email: "",
+        name: '',
+        email: '',
         requirements: {
           ecommerce: false,
           portfolio: false,
           blog: false,
           other: false,
         },
-        additionals: "",
-      }
+        additionals: '',
+      },
     };
   }
   handleToggle = (e) => {
     let status = e.target.checked;
     this.setState((prevState) => ({
-      data : {...prevState.data, requirements: {...prevState.data.requirements, [e.target.name] : status}}
+      data: {
+        ...prevState.data,
+        requirements: {
+          ...prevState.data.requirements,
+          [e.target.name]: status,
+        },
+      },
     }));
-  }
+  };
   handleInputChange = (e) => {
     this.setState((prevState) => ({
-      data : {...prevState.data, [e.target.name] : e.target.value}
+      data: { ...prevState.data, [e.target.name]: e.target.value },
     }));
-  }
+  };
   handleSubmit = (e) => {
     e.preventDefault();
     fetch(API_URL, {
-     method : 'POST',
-     headers : {
-       'Content-Type' : 'application/json',
-     },
-     body : JSON.stringify(this.state.data)
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state.data),
     })
-    .then(res => res.json())
-    .then(data => this.postSubmit(data.message))
-    .catch(err => console.log(err));
-  }
+      .then((res) => res.json())
+      .then((data) => this.postSubmit(data.message))
+      .catch((err) => console.log(err));
+  };
   postSubmit = (message) => {
     alert(message);
-    this.setState({data: {
-      name: "",
-      email: "",
-      requirements: {
-        ecommerce: false,
-        portfolio: false,
-        blog: false,
-        other: false,
+    this.setState({
+      data: {
+        name: '',
+        email: '',
+        requirements: {
+          ecommerce: false,
+          portfolio: false,
+          blog: false,
+          other: false,
+        },
+        additionals: '',
       },
-      additionals: "",
-    }})
-  }
+    });
+  };
   render() {
     return (
       <div id="hire">
@@ -68,7 +76,7 @@ class Hire extends Component {
             <h2>Or even the UI/UX of your application?</h2>
             <h4>
               Send your requirements through this form and request for a price
-              quotation. Or else, feel free to connect with me on LinkedIn{" "}
+              quotation. Or else, feel free to connect with me on LinkedIn{' '}
               <br /> (unless you’re named Rishika.)
             </h4>
           </div>
@@ -78,26 +86,26 @@ class Hire extends Component {
             </div>
             <form onSubmit={this.handleSubmit}>
               <div className="form-block-1">
-              <label htmlFor="full-name">
-                <input
-                  type="text"
-                  name="name"
-                  id="full-name"
-                  placeholder="Full Name"
-                  value={this.state.data.name}
-                  onChange={this.handleInputChange}
-                />
-              </label>
-              <label htmlFor="email">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email Address"
-                  value={this.state.data.email}
-                  onChange={this.handleInputChange}
-                />
-              </label>
+                <label htmlFor="full-name">
+                  <input
+                    type="text"
+                    name="name"
+                    id="full-name"
+                    placeholder="Full Name"
+                    value={this.state.data.name}
+                    onChange={this.handleInputChange}
+                  />
+                </label>
+                <label htmlFor="email">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email Address"
+                    value={this.state.data.email}
+                    onChange={this.handleInputChange}
+                  />
+                </label>
               </div>
               <div className="requirement-type-block">
                 <div className="item">
@@ -107,7 +115,7 @@ class Hire extends Component {
                     name="ecommerce"
                     onChange={this.handleToggle}
                   />
-                 <span>E-commerce Website</span>
+                  <span>E-commerce Website</span>
                 </div>
                 <div className="item">
                   <input
@@ -116,7 +124,7 @@ class Hire extends Component {
                     name="portfolio"
                     onChange={this.handleToggle}
                   />
-                 <span>Portfolio Website</span>
+                  <span>Portfolio Website</span>
                 </div>
                 <div className="item">
                   <input
@@ -125,7 +133,7 @@ class Hire extends Component {
                     name="blog"
                     onChange={this.handleToggle}
                   />
-                 <span>Static Business Website</span>
+                  <span>Static Business Website</span>
                 </div>
                 <div className="item">
                   <input
@@ -134,7 +142,7 @@ class Hire extends Component {
                     name="other"
                     onChange={this.handleToggle}
                   />
-                 <span>Other</span>
+                  <span>Other</span>
                 </div>
               </div>
               <label htmlFor="add-req">
@@ -146,13 +154,13 @@ class Hire extends Component {
                   onChange={this.handleInputChange}
                 />
               </label>
-              <input type="submit" value="Request Quotation"/>
+              <input type="submit" value="Request Quotation" />
             </form>
           </div>
         </div>
         <div className="projects">
           <h1 className="projects-title">Recent Work</h1>
-          <Projects/>
+          <Projects />
         </div>
       </div>
     );
