@@ -8,7 +8,7 @@ const IndividualBlog = () => {
   const [blog, setBlog] = useState([]);
   const [blogLoaded, setBlogLoaded] = useState(false);
   let { slug } = useParams();
-  let API_URL = 'https://portfolio-website-7r8u.onrender.com/api/blogs' + slug;
+  let API_URL = 'https://portfolio-website-7r8u.onrender.com/api/blogs/' + slug;
   function addParagraph(content) {
     let contentArr = content.split('<br/>');
     return contentArr;
